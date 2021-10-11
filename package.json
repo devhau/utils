@@ -1,6 +1,6 @@
 {
   "name": "@devhau/utils",
-  "version": "0.0.3",
+  "version": "0.0.3-fix",
   "description": "Utilities for projects",
   "author": "Dev Hau <nguyenvanhaudev@gmail.com>",
   "repository": "https://github.com/devhau/utils",
@@ -11,9 +11,11 @@
     "esbuild",
     "browser"
   ],
-  "main": "./dist/tsc/main.js",
-  "types": "./dist/tsc/main.d.ts",
-  "browser": "./dist/esbuild/browser.js",
+  "main": "dist/tsc/main.js",
+  "browser": "dist/esbuild/browser.js",
+  "module": "dist/tsc/main.js",
+  "unpkg": "dist/tsc/main.js",
+  "types": "dist/types/src/entry.esm.d.ts",
   "bin": {
     "my-cli-tool": "./dist/esbuild/cli.js"
   },
