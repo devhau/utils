@@ -1,4 +1,4 @@
-const tags = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo',
+const tags: any = ['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo',
   'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data',
   'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset',
   'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header',
@@ -42,7 +42,7 @@ const maxScrollLeft = (element: any) => element.scrollWidth - element.clientWidt
 const maxScrollTop = (element: any) => element.scrollHeight - element.clientHeight;
 
 
-const makeNumClass = (className: string, prex: string, Num: number, pr = '-') => {
+const makeClassByNumber = (className: string, prex: string, Num: number, pr = '-') => {
   if (Num === 0) {
     return `${className} ${prex}${pr}auto`;
   }
@@ -52,12 +52,11 @@ const makeNumClass = (className: string, prex: string, Num: number, pr = '-') =>
   return className;
 }
 
-const makeTextClass = (className: string, prex: string, value: string | number, pr = '-') => {
+const makeClassByName = (className: string, prex: string, value: string | number | any, pr = '-') => {
   if (value !== '') {
     return `${className} ${prex}${pr}${value}`;
   }
   return className;
 }
 
-
-export { isHtmlTag, isHtmlAttribute, isTransition, insertNodeAt, removeNode, maxScrollLeft, maxScrollTop, makeNumClass, makeTextClass };
+export { isHtmlTag, isHtmlAttribute, isTransition, insertNodeAt, removeNode, maxScrollLeft, maxScrollTop, makeClassByNumber, makeClassByName };
